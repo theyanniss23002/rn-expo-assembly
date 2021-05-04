@@ -1,5 +1,3 @@
-const ApiUrls = {
-    
-};
+const ApiUrls = {};
 
 export default ApiUrls;

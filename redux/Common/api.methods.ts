@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-const ApiCommonMethods = {
-    
-};
+const ApiCommonMethods = {};
 
 export default ApiCommonMethods;

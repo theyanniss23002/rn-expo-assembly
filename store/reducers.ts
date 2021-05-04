@@ -10,9 +10,10 @@ reducersLazyLoad((module: any, path: any) => {
     }
 });
 
-const combinedReducers = (history: any) => combineReducers({
-    router: connectRouter(history),
-    ...reducers
-});
+const combinedReducers = (history: any) =>
+    combineReducers({
+        router: connectRouter(history),
+        ...reducers
+    });
 
 export default combinedReducers;

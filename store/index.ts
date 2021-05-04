@@ -12,11 +12,7 @@ const history = createBrowserHistory({
 const routeMiddleware = routerMiddleware(history);
 const sagaMiddleware = createSagaMiddleware();
 
-const middlewares = [
-    sagaMiddleware,
-    routeMiddleware,
-    ...rootMiddleware
-];
+const middlewares = [sagaMiddleware, routeMiddleware, ...rootMiddleware];
 
 declare global {
     interface Window {
@@ -28,7 +24,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 declare global {
     interface Window {
-        store: any
+        store: any;
     }
 }
 
@@ -36,9 +32,7 @@ export default function configureStore(initialState = {}) {
     const store = createStore(
         createRootReducer(history),
         initialState,
-        composeEnhancers(
-            applyMiddleware(...middlewares)
-        )
+        composeEnhancers(applyMiddleware(...middlewares))
     );
     sagaMiddleware.run(rootSaga);
 
