@@ -1,10 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import FirstScreen from './app/components/FirstScreen';
+import Button from './app/shared/Button';
 
 const App: React.FC = () => {
     return (
         <View style={styles.app}>
-            <Text>React Native Expo</Text>
+            <FirstScreen />
+            <Button />
         </View>
     );
 };
