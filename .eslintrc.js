@@ -1,24 +1,23 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
+    plugins: ['auto-import'],
     parserOptions: {
         ecmaVersion: 2020,
         sourceType: 'module',
-        ecmaFeatures: {
-            jsx: true,
-        },
+        ecmaFeatures: { jsx: true }
     },
     settings: {
         react: {
-            version: 'detect',
-        },
+            version: 'detect'
+        }
     },
     extends: [
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
-        'prettier',
+        'prettier'
     ],
     rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off',
-    },
+        '@typescript-eslint/explicit-function-return-type': 'off'
+    }
 };
