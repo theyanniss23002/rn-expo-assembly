@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import FirstScreen from './app/components/FirstScreen';
+import FirstScreen from './app/screens/FirstScreen';
 import Button from './app/shared/Button';
 
 const App: React.FC = () => {
